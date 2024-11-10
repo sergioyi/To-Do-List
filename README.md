@@ -10,10 +10,10 @@ Backend (Tecnologia a critério do aluno):
 
 Implementar um serviço RESTful para gerenciar as tarefas (CRUD).\
 ❌Incluir tarefa;\
-❌Apagar tarefa;\
+⚠️Apagar tarefa;\
 ❌Consumtar lista de tarefas;\
 ❌Atualizar tarefa;\
-⚠️Persistir os dados das tarefas em um banco de dados (pode ser o AWS DynamoDB ou algum escolhido por vocês)\
+✅Persistir os dados das tarefas em um banco de dados (pode ser o AWS DynamoDB ou algum escolhido por vocês)\
 ❌Utilizar AWS SQS ou outra mensageria para envio de notificações assíncronas quando uma tarefa for criada ou atualizada. A notificação vai conter o seguinte payload
 ```json
 {
@@ -46,7 +46,7 @@ API RESTful:
 
 ❌Endpoints para criar, ler, atualizar e deletar tarefas.\
 ❌Endpoint para upload de arquivos relacionados às tarefas.\
-⚠️Documentação da API utilizando Swagger ou similar.\
+✅Documentação da API utilizando [Swagger](http://localhost:8080/swagger-ui/swagger-ui/index.html#/) ou similar.\
 Mensageria:
 
 ❌Configuração de uma fila SQS ou outra mensageria para envio de notificações assíncronas. Eu recomendo SQS que é mais fácil.\
@@ -57,7 +57,7 @@ AWS S3:
 ❌Endpoint para upload e download de arquivos relacionados às tarefas.\
 Banco de dados:
 
-⚠️Configuração de um banco de dados. Eu recomendo tabela DynamoDB para armazenamento das tarefas.\
+✅Configuração de um banco de dados. Eu recomendo tabela DynamoDB para armazenamento das tarefas.\
 Docker e Docker-Compose:
 
 ❌Dockerfile para a aplicação backend.\

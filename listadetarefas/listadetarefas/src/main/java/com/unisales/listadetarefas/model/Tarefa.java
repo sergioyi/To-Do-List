@@ -52,5 +52,13 @@ public class Tarefa {
         this.ordem = ordem;
     }
     
+    public Tarefa() { }
+    public Tarefa(TarefaDTO tarefa){
+        this.id = tarefa.id();
+        this.nometarefa = tarefa.nometarefa();
+        this.custo = tarefa.custo();
+        this.datalimite = tarefa.datalimite();
+        this.ordem = tarefa.ordem();
+    }
     
 }
