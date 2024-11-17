@@ -9,9 +9,9 @@ Vocês deverão desenvolver uma aplicação web para gerenciamento de tarefas (T
 Backend (Tecnologia a critério do aluno):
 
 Implementar um serviço RESTful para gerenciar as tarefas (CRUD).\
-❌Incluir tarefa;\
-⚠️Apagar tarefa;\
-❌Consumtar lista de tarefas;\
+✅Incluir tarefa;\
+✅Apagar tarefa;\
+✅Consultar lista de tarefas;\
 ❌Atualizar tarefa;\
 ✅Persistir os dados das tarefas em um banco de dados (pode ser o AWS DynamoDB ou algum escolhido por vocês)\
 ❌Utilizar AWS SQS ou outra mensageria para envio de notificações assíncronas quando uma tarefa for criada ou atualizada. A notificação vai conter o seguinte payload
@@ -22,7 +22,7 @@ Implementar um serviço RESTful para gerenciar as tarefas (CRUD).\
 }
 ```
 ## Armazenamento de arquivos: 
-⚠️A APP deve permitir upload de arquivos relacionados às tarefas, armazenando-os no AWS S3. 
+⚠️O APP deve permitir upload de arquivos relacionados às tarefas, armazenando-os no AWS S3. 
 
 ## Containerização:
 
@@ -34,8 +34,8 @@ Implementar um serviço RESTful para gerenciar as tarefas (CRUD).\
 ❌Configurar o ambiente de produção usando Docker-Compose.
 ## Controle de Versão e Integração Contínua:
 
-❌Utilizar Git para controle de versão do código.\
-❌Hospedar o repositório no GitHub.\
+✅Utilizar Git para controle de versão do código.\
+✅Hospedar o repositório no GitHub.\
 Configurar GitHub Actions para realizar\
 ❌a integração contínua,\
 ❌executando testes automatizados\
@@ -44,7 +44,7 @@ Configurar GitHub Actions para realizar\
 
 API RESTful:
 
-❌Endpoints para criar, ler, atualizar e deletar tarefas.\
+⚠️Endpoints para criar, ler, atualizar e deletar tarefas.\
 ❌Endpoint para upload de arquivos relacionados às tarefas.\
 ✅Documentação da API utilizando [Swagger](http://localhost:8080/swagger-ui/swagger-ui/index.html#/) ou similar.\
 Mensageria:
@@ -67,7 +67,7 @@ Deploy:
 ❌Deploy da aplicação em uma instância EC2 da AWS.\
 Git e GitHub Actions:
 
-❌Repositório Git hospedado no GitHub.\
+✅Repositório Git hospedado no GitHub.\
 ❌Pipeline de integração contínua configurado com GitHub Actions.
 
 Referências:\
