@@ -12,7 +12,7 @@ Implementar um serviço RESTful para gerenciar as tarefas (CRUD).\
 ✅Incluir tarefa;\
 ✅Apagar tarefa;\
 ✅Consultar lista de tarefas;\
-❌Atualizar tarefa;\
+✅Atualizar tarefa;\
 ✅Persistir os dados das tarefas em um banco de dados (pode ser o AWS DynamoDB ou algum escolhido por vocês)\
 ❌Utilizar AWS SQS ou outra mensageria para envio de notificações assíncronas quando uma tarefa for criada ou atualizada. A notificação vai conter o seguinte payload
 ```json
@@ -68,7 +68,7 @@ Deploy:
 Git e GitHub Actions:
 
 ✅Repositório Git hospedado no GitHub.\
-❌Pipeline de integração contínua configurado com GitHub Actions.
+⚠️Pipeline de integração contínua configurado com GitHub Actions.
 
 Referências:\
 [AWS DynamoDB: Como criar um CRUD com Spring Boot e Java 21](https://youtu.be/qxSeffy6Nr4?si=3ELyqwSfU-5OYxNB)
