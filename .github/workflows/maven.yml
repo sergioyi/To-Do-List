@@ -44,7 +44,7 @@ jobs:
     # Adicionando um passo para esperar o banco de dados estar disponível
     - name: Wait for PostgreSQL to be ready
       run: |
-        docker exec -t postgres pg_isready -U testuser -d testdb
+        docker exec -t postgres pg_isready -U postgres -d postgres
         echo "PostgreSQL is ready!"
 
     - name: Build with Maven
