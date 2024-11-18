@@ -2,6 +2,7 @@ package com.unisales.listadetarefas.service;
 
 import java.util.Optional;
 
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -16,6 +17,8 @@ import com.unisales.listadetarefas.persistence.TarefaRepository;
 public class TarefaService {
     @Autowired
     private TarefaRepository repository;
+    @Autowired
+    private RabbitTemplate rabbitMQServices;
 
     public ResponseEntity<String> Incluir(@RequestBody TarefaDTO tarefaDTO) {
         if (tarefaDTO.descricao() == null || tarefaDTO.descricao() == "") { 
@@ -25,8 +28,11 @@ public class TarefaService {
         if (byNometarefa.isPresent()) {
             return ResponseEntity.badRequest().body("Não pode haver duas tarefas com a mesma descrição");
         }
-
         this.repository.save(new Tarefa(new TarefaDTO(tarefaDTO.descricao())));
+        //busca a mensagem
+        Optional<Tarefa> byDescricao = this.repository.findByDescricao(tarefaDTO.descricao());
+        Tarefa payload =byDescricao.get();
+        this.enviarMensagem(payload);
         return ResponseEntity.ok().body("Tarefa inclusa com sucesso");
     }
 
@@ -61,6 +67,10 @@ public class TarefaService {
 
     public Iterable<Tarefa> ListaTarefas() {
         return this.repository.findAll();
+    }
+
+    public void enviarMensagem(Object mensagem){
+        this.rabbitMQServices.convertAndSend("topicotarefa", mensagem);
     }
 
 }

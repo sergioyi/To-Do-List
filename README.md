@@ -14,7 +14,7 @@ Implementar um serviço RESTful para gerenciar as tarefas (CRUD).\
 ✅Consultar lista de tarefas;\
 ✅Atualizar tarefa;\
 ✅Persistir os dados das tarefas em um banco de dados (pode ser o AWS DynamoDB ou algum escolhido por vocês)\
-❌Utilizar AWS SQS ou outra mensageria para envio de notificações assíncronas quando uma tarefa for criada ou atualizada. A notificação vai conter o seguinte payload
+⚠️Utilizar AWS SQS ou outra mensageria para envio de notificações assíncronas quando uma tarefa for criada ou atualizada. A notificação vai conter o seguinte payload
 ```json
 {
     "descricao": <DESCRICAO DA TAREFA>, 
@@ -44,7 +44,7 @@ Configurar GitHub Actions para realizar\
 
 API RESTful:
 
-⚠️Endpoints para criar, ler, atualizar e deletar tarefas.\
+✅Endpoints para criar, ler, atualizar e deletar tarefas.\
 ❌Endpoint para upload de arquivos relacionados às tarefas.\
 ✅Documentação da API utilizando [Swagger](http://localhost:8080/swagger-ui/swagger-ui/index.html#/) ou similar.\
 Mensageria:
@@ -60,8 +60,8 @@ Banco de dados:
 ✅Configuração de um banco de dados. Eu recomendo tabela DynamoDB para armazenamento das tarefas.\
 Docker e Docker-Compose:
 
-❌Dockerfile para a aplicação backend.\
-❌docker-compose.yml para orquestração dos serviços necessários.\
+✅Dockerfile para a aplicação backend.\
+⚠️docker-compose.yml para orquestração dos serviços necessários.\
 Deploy:
 
 ❌Deploy da aplicação em uma instância EC2 da AWS.\
