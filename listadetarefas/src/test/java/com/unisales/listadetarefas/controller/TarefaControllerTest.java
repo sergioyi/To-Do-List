@@ -64,7 +64,7 @@ public class TarefaControllerTest {
         assertEquals("Tarefa excluida !", excluir.getBody());
     }
 
-   /* @Test
+   @Test
     void testIncluir() {
         TarefaDTO tarefaDTO = new TarefaDTO("tarefa");
         Tarefa tarefa = new Tarefa(new TarefaDTO(tarefaDTO.descricao()));
@@ -78,7 +78,7 @@ public class TarefaControllerTest {
         assertEquals(HttpStatus.BAD_REQUEST, incluir.getStatusCode());
         assertEquals("Não pode haver duas tarefas com a mesma descrição", incluir.getBody());
     }
-    */
+
     @Test
     @DisplayName("Lista de vazia")
     void testListaTarefas() {

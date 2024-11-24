@@ -27,7 +27,7 @@ Implementar um serviço RESTful para gerenciar as tarefas (CRUD).\
 ## Containerização:
 
 ✅Containerizar a aplicação backend utilizando Docker.\
-⚠️Utilizar Docker-Compose para orquestrar o backend e outros serviços necessários.
+✅Utilizar Docker-Compose para orquestrar o backend e outros serviços necessários.
 ## Deploy na Nuvem:
 
 ❌Realizar o deploy da aplicação em uma instância EC2 da AWS.\
@@ -61,7 +61,7 @@ Banco de dados:
 Docker e Docker-Compose:
 
 ✅Dockerfile para a aplicação backend.\
-⚠️docker-compose.yml para orquestração dos serviços necessários.\
+✅docker-compose.yml para orquestração dos serviços necessários.\
 Deploy:
 
 ❌Deploy da aplicação em uma instância EC2 da AWS.\
