@@ -22,12 +22,12 @@ Implementar um serviço RESTful para gerenciar as tarefas (CRUD).\
 }
 ```
 ## Armazenamento de arquivos: 
-⚠️O APP deve permitir upload de arquivos relacionados às tarefas, armazenando-os no AWS S3. 
+✅O APP deve permitir upload de arquivos relacionados às tarefas, armazenando-os no AWS S3. 
 
 ## Containerização:
 
-❌Containerizar a aplicação backend utilizando Docker.\
-❌Utilizar Docker-Compose para orquestrar o backend e outros serviços necessários.
+✅Containerizar a aplicação backend utilizando Docker.\
+⚠️Utilizar Docker-Compose para orquestrar o backend e outros serviços necessários.
 ## Deploy na Nuvem:
 
 ❌Realizar o deploy da aplicação em uma instância EC2 da AWS.\
@@ -45,7 +45,7 @@ Configurar GitHub Actions para realizar\
 API RESTful:
 
 ✅Endpoints para criar, ler, atualizar e deletar tarefas.\
-❌Endpoint para upload de arquivos relacionados às tarefas.\
+✅Endpoint para upload de arquivos relacionados às tarefas.\
 ✅Documentação da API utilizando [Swagger](http://localhost:8080/swagger-ui/swagger-ui/index.html#/) ou similar.\
 Mensageria:
 
@@ -53,8 +53,8 @@ Mensageria:
 ❌Envio de mensagens para a fila sempre que uma tarefa for criada ou atualizada.\
 AWS S3:
 
-⚠️Configuração de um bucket S3 para armazenamento de arquivos.\
-❌Endpoint para upload e download de arquivos relacionados às tarefas.\
+✅Configuração de um bucket S3 para armazenamento de arquivos.\
+✅Endpoint para upload e download de arquivos relacionados às tarefas.\
 Banco de dados:
 
 ✅Configuração de um banco de dados. Eu recomendo tabela DynamoDB para armazenamento das tarefas.\
@@ -70,6 +70,9 @@ Git e GitHub Actions:
 ✅Repositório Git hospedado no GitHub.\
 ⚠️Pipeline de integração contínua configurado com GitHub Actions.
 
-Referências:\
-[AWS DynamoDB: Como criar um CRUD com Spring Boot e Java 21](https://youtu.be/qxSeffy6Nr4?si=3ELyqwSfU-5OYxNB)
-✅❌⚠️
+<details>
+<summary>Referências:</summary>
+
+[AWS Tutorial 1 - Launching EC2 Ubuntu Machine on AWS](https://www.youtube.com/watch?v=osqZnijkhtE&ab_channel=KGPTalkie)\
+[Spring Boot With Amazon S3 : File Upload & Download Example | S3 Bucket | JavaTechie](https://www.youtube.com/watch?v=vY7c7k8xmKE&ab_channel=JavaTechie)
+</details>

@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.unisales.listadetarefas.model.Tarefa;
 import com.unisales.listadetarefas.model.TarefaDTO;
@@ -23,6 +25,7 @@ public class TarefaController {
 
     @Autowired
     private TarefaService service;
+
 
     @PostMapping("/")
     public ResponseEntity<?> Incluir(@RequestBody TarefaDTO tarefaDTO) {
@@ -41,5 +44,13 @@ public class TarefaController {
     public Iterable<Tarefa> ListaTarefas(){
         return this.service.ListaTarefas();
     }
-    
+    @PostMapping("/upload")
+    public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file) {
+        try {
+            String fileName = this.service.uploadFile(file);
+            return ResponseEntity.ok("Arquivo enviado: " + fileName);
+        } catch (Exception e) {
+            return ResponseEntity.status(500).body("Erro ao enviar o arquivo: " + e.getMessage());
+        }
+    }
 }
