@@ -29,8 +29,8 @@ import software.amazon.awssdk.services.s3.model.PutObjectRequest;
 public class TarefaService {
     @Autowired
     private TarefaRepository repository;
-    @Value("${amazon.aws.bucket.name}")
-    private String SQS;
+    
+    private String SQS = "https://sqs.sa-east-1.amazonaws.com/593793054253/topicotarefa";
     @Autowired
     private SqsTemplate sqsTemplate;
 
