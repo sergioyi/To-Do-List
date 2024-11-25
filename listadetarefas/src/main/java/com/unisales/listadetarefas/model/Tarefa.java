@@ -37,5 +37,12 @@ public class Tarefa implements Serializable {
         this.id = id;
         this.descricao = descricao;
     }
-    
+    @Override
+    public String toString() {
+        return "\n{" +
+            "\"id\": " + (id != null ? id : "null") + ", " +
+            "\"descricao\": \"" + (descricao != null ? descricao : "") + "\"" +
+        "}";
+    }
+
 }

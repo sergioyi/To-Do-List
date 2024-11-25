@@ -5,7 +5,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Optional;
 
-import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +18,7 @@ import com.unisales.listadetarefas.model.Tarefa;
 import com.unisales.listadetarefas.model.TarefaDTO;
 import com.unisales.listadetarefas.persistence.TarefaRepository;
 
+import io.awspring.cloud.sqs.operations.SqsTemplate;
 import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
 import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
 import software.amazon.awssdk.regions.Region;
@@ -29,8 +29,10 @@ import software.amazon.awssdk.services.s3.model.PutObjectRequest;
 public class TarefaService {
     @Autowired
     private TarefaRepository repository;
+    @Value("${amazon.aws.bucket.name}")
+    private String SQS;
     @Autowired
-    private RabbitTemplate rabbitMQServices;
+    private SqsTemplate sqsTemplate;
 
     @Value("${cloud.aws.region}")
     private String region;
@@ -72,7 +74,9 @@ public class TarefaService {
         //busca a mensagem
         Optional<Tarefa> byDescricao = this.repository.findByDescricao(tarefaDTO.descricao());
         Tarefa payload =byDescricao.get();
-        this.enviarMensagem(payload);
+        
+        sqsTemplate.send(SQS, payload);
+
         return ResponseEntity.ok().body("Tarefa inclusa com sucesso");
     }
 
@@ -139,6 +143,9 @@ public class TarefaService {
 
         tarefa.setDescricao(tarefaDTO.descricao());
         this.repository.save(tarefa);
+
+        sqsTemplate.send(SQS, tarefa);
+
         return ResponseEntity.ok().body("editado com sucesso !");
     }
 
@@ -146,19 +153,6 @@ public class TarefaService {
         return this.repository.findAll();
     }
 
-    /**
-     * Envia uma mensagem para o tópico RabbitMQ especificado.
-     * <p>
-     * Este método utiliza o serviço RabbitMQ para converter e enviar uma mensagem
-     * para o tópico denominado "topicotarefa". A mensagem pode ser de qualquer tipo
-     * de objeto e será enviada para o tópico especificado.
-     * </p>
-     * 
-     * @param mensagem A mensagem a ser enviada para o tópico RabbitMQ.
-     */
-    private void enviarMensagem(Object mensagem) {
-        this.rabbitMQServices.convertAndSend("topicotarefa", mensagem);
-    }
 
     public String uploadFile(@org.springframework.web.bind.annotation.RequestBody @RequestPart("file") MultipartFile file) throws IOException {
             S3Client s3Client = S3Client.builder()
@@ -186,6 +180,5 @@ public class TarefaService {
     
             return fileName;
     }
-  
 
 }

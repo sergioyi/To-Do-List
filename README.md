@@ -14,7 +14,7 @@ Implementar um serviço RESTful para gerenciar as tarefas (CRUD).\
 ✅Consultar lista de tarefas;\
 ✅Atualizar tarefa;\
 ✅Persistir os dados das tarefas em um banco de dados (pode ser o AWS DynamoDB ou algum escolhido por vocês)\
-⚠️Utilizar AWS SQS ou outra mensageria para envio de notificações assíncronas quando uma tarefa for criada ou atualizada. A notificação vai conter o seguinte payload
+✅Utilizar AWS SQS ou outra mensageria para envio de notificações assíncronas quando uma tarefa for criada ou atualizada. A notificação vai conter o seguinte payload
 ```json
 {
     "descricao": <DESCRICAO DA TAREFA>, 
@@ -49,8 +49,8 @@ API RESTful:
 ✅Documentação da API utilizando [Swagger](http://localhost:8080/swagger-ui/swagger-ui/index.html#/) ou similar.\
 Mensageria:
 
-❌Configuração de uma fila SQS ou outra mensageria para envio de notificações assíncronas. Eu recomendo SQS que é mais fácil.\
-❌Envio de mensagens para a fila sempre que uma tarefa for criada ou atualizada.\
+✅Configuração de uma fila SQS ou outra mensageria para envio de notificações assíncronas. Eu recomendo SQS que é mais fácil.\
+✅Envio de mensagens para a fila sempre que uma tarefa for criada ou atualizada.\
 AWS S3:
 
 ✅Configuração de um bucket S3 para armazenamento de arquivos.\
@@ -74,5 +74,7 @@ Git e GitHub Actions:
 <summary>Referências:</summary>
 
 [AWS Tutorial 1 - Launching EC2 Ubuntu Machine on AWS](https://www.youtube.com/watch?v=osqZnijkhtE&ab_channel=KGPTalkie)\
-[Spring Boot With Amazon S3 : File Upload & Download Example | S3 Bucket | JavaTechie](https://www.youtube.com/watch?v=vY7c7k8xmKE&ab_channel=JavaTechie)
+[Spring Boot With Amazon S3 : File Upload & Download Example | S3 Bucket | JavaTechie](https://www.youtube.com/watch?v=vY7c7k8xmKE&ab_channel=JavaTechie)\
+[AWS SQS: Como publicar e consumir mensagens com Spring Cloud AWS](https://www.youtube.com/watch?v=56_F59cIT8M&t=758s&ab_channel=Build%26Run)
+
 </details>

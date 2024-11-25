@@ -15,6 +15,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
@@ -23,6 +24,8 @@ import com.unisales.listadetarefas.model.TarefaDTO;
 import com.unisales.listadetarefas.persistence.TarefaRepository;
 import com.unisales.listadetarefas.service.TarefaService;
 
+import io.awspring.cloud.sqs.operations.SqsTemplate;
+
 public class TarefaControllerTest {
     @Mock
     private TarefaRepository repository;
@@ -30,6 +33,10 @@ public class TarefaControllerTest {
     private TarefaService service;
     @Mock
     private TarefaService servicemock;
+    @Value("${amazon.aws.bucket.name}")
+    private String SQS;
+    @Mock
+    private SqsTemplate sqsTemplate;
     
     @BeforeEach 
     void setUp() { 
