@@ -46,7 +46,9 @@ jobs:
     needs: build
     runs-on: self-hosted
     steps:
-      - name: Remove docker containers
-        run: docker rm listadetarefas-container
-      - name: Deploy to AWS
-        run: cd listadetarefas && docker compose up
+      - name: Teste de build
+        run: ls
+      #- name: Remove docker containers
+      #  run: docker rm listadetarefas-container
+      #- name: Deploy to AWS
+      #  run: docker compose up
