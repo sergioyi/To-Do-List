@@ -36,7 +36,7 @@ jobs:
     - name: Build with Maven
       run : cd listadetarefas && mvn clean install
     - name: Build docker image
-      run: docker build -t listadetarefas .
+      run: cd listadetarefas && docker build -t listadetarefas .
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     #- name: Update dependency graph
@@ -49,4 +49,4 @@ jobs:
       - name: Remove docker containers
         run: docker rm listadetarefas-container
       - name: Deploy to AWS
-        run: docker compose up
+        run: cd listadetarefas && docker compose up
