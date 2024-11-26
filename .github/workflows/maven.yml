@@ -32,9 +32,9 @@ jobs:
     - name: Observing path
       run: ls
     - name: Testes with Maven
-      run: mvn clean test
+      run: cd listadetarefas && mvn clean test
     - name: Build with Maven
-      run : mvn clean install
+      run : cd listadetarefas && mvn clean install
     - name: Build docker image
       run: docker build -t listadetarefas .
 
