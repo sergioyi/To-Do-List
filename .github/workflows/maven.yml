@@ -34,7 +34,7 @@ jobs:
     - name: Testes with Maven
       run: cd listadetarefas && mvn clean test
     - name: Build with Maven
-      run : cd listadetarefas && mvn clean install
+      run : cd listadetarefas && mvn clean install -DskipTests
     - name: Build docker image
       run: cd listadetarefas && docker build -t listadetarefas .
 
