@@ -28,7 +28,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Access to Project
-      run: cd /home/runner/work/To-Do-List/To-Do-List/listadetarefas
+      run: cd To-Do-List/listadetarefas
     - name: Testes with Maven
       run: mvn clean test
     - name: Build with Maven
