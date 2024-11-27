@@ -44,8 +44,6 @@ jobs:
     steps:
       - name: Teste de build
         run: ls
-      - name: Remove docker containers
-        run: sudo docker rm listadetarefas-container
       - name: Deploy to AWS
         run: cd To-Do-List/listadetarefas && sudo docker compose up
       
