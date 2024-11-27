@@ -45,5 +45,5 @@ jobs:
       - name: Teste de build
         run: cd ~ && ls
       - name: Deploy to AWS
-        run: cd ~/To-Do-List/listadetarefas && sudo docker compose up
+        run: cd listadetarefas && sudo docker compose up
       
