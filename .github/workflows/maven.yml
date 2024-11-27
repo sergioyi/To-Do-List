@@ -45,5 +45,5 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Deploy to AWS
-        run: cd listadetarefas && sudo docker compose up
+        run: cd listadetarefas && sudo docker compose up -d
       
