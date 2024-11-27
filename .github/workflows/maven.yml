@@ -42,8 +42,8 @@ jobs:
     needs: build
     runs-on: self-hosted
     steps:
-      - name: Teste de build
-        run: cd ~ && ls
+      - name: Checkout repository
+        uses: actions/checkout@v4
       - name: Deploy to AWS
         run: cd listadetarefas && sudo docker compose up
       
