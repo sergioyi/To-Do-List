@@ -30,16 +30,16 @@ Implementar um serviço RESTful para gerenciar as tarefas (CRUD).\
 ✅Utilizar Docker-Compose para orquestrar o backend e outros serviços necessários.
 ## Deploy na Nuvem:
 
-❌Realizar o deploy da aplicação em uma instância EC2 da AWS.\
-❌Configurar o ambiente de produção usando Docker-Compose.
+✅Realizar o deploy da aplicação em uma instância EC2 da AWS.\
+✅Configurar o ambiente de produção usando Docker-Compose.
 ## Controle de Versão e Integração Contínua:
 
 ✅Utilizar Git para controle de versão do código.\
 ✅Hospedar o repositório no GitHub.\
 Configurar GitHub Actions para realizar\
-❌a integração contínua,\
-❌executando testes automatizados\
-❌e realizando o deploy automático para a AWS EC2.
+✅a integração contínua,\
+✅executando testes automatizados\
+✅e realizando o deploy automático para a AWS EC2.
 # Requisitos Específicos:
 
 API RESTful:
@@ -64,11 +64,11 @@ Docker e Docker-Compose:
 ✅docker-compose.yml para orquestração dos serviços necessários.\
 Deploy:
 
-❌Deploy da aplicação em uma instância EC2 da AWS.\
+✅Deploy da aplicação em uma instância EC2 da AWS.\
 Git e GitHub Actions:
 
 ✅Repositório Git hospedado no GitHub.\
-⚠️Pipeline de integração contínua configurado com GitHub Actions.
+✅Pipeline de integração contínua configurado com GitHub Actions.
 
 <details>
 <summary>Referências:</summary>
@@ -76,5 +76,5 @@ Git e GitHub Actions:
 [AWS Tutorial 1 - Launching EC2 Ubuntu Machine on AWS](https://www.youtube.com/watch?v=osqZnijkhtE&ab_channel=KGPTalkie)\
 [Spring Boot With Amazon S3 : File Upload & Download Example | S3 Bucket | JavaTechie](https://www.youtube.com/watch?v=vY7c7k8xmKE&ab_channel=JavaTechie)\
 [AWS SQS: Como publicar e consumir mensagens com Spring Cloud AWS](https://www.youtube.com/watch?v=56_F59cIT8M&t=758s&ab_channel=Build%26Run)
-
+[Spring Boot - Deploy na AWS EC2 com Github Actions e Docker](https://www.youtube.com/watch?v=mIuFF_ZP_60&ab_channel=DanieleLe%C3%A3o)
 </details>
