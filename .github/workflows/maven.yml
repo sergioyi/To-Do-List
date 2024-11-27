@@ -43,7 +43,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Teste de build
-        run: ls
+        run: cd ~ && ls
       - name: Deploy to AWS
-        run: cd listadetarefas && sudo docker compose up
+        run: cd ~/To-Do-List/listadetarefas && sudo docker compose up
       
