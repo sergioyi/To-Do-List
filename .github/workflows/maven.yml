@@ -44,8 +44,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Clean port 8080
-        run: sudo docker rm listadetarefas-app-1
+      - name: Docker Compose Down
+        run: docker-compose down -v
       - name: Deploy to AWS
         run: cd listadetarefas && sudo docker compose up -d
       
