@@ -39,11 +39,11 @@ public class TarefaService {
     //private final S3Client s3Client = S3Client.builder().build();
     private final String bucketName = "sergio29";
 
-    @Value("${amazon.aws.access-key}")
-    private String awsacess;
+    //@Value("${amazon.aws.access-key}")
+    //private String awsacess;
 
-    @Value("${amazon.aws.secret-key}")
-    private String awssecretkey;
+    //@Value("${amazon.aws.secret-key}")
+    //private String awssecretkey;
 
 
     /** 
