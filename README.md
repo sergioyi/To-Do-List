@@ -76,5 +76,6 @@ Git e GitHub Actions:
 [AWS Tutorial 1 - Launching EC2 Ubuntu Machine on AWS](https://www.youtube.com/watch?v=osqZnijkhtE&ab_channel=KGPTalkie)\
 [Spring Boot With Amazon S3 : File Upload & Download Example | S3 Bucket | JavaTechie](https://www.youtube.com/watch?v=vY7c7k8xmKE&ab_channel=JavaTechie)\
 [AWS SQS: Como publicar e consumir mensagens com Spring Cloud AWS](https://www.youtube.com/watch?v=56_F59cIT8M&t=758s&ab_channel=Build%26Run)
-[Spring Boot - Deploy na AWS EC2 com Github Actions e Docker](https://www.youtube.com/watch?v=mIuFF_ZP_60&ab_channel=DanieleLe%C3%A3o)
+[Spring Boot - Deploy na AWS EC2 com Github Actions e Docker](https://www.youtube.com/watch?v=mIuFF_ZP_60&ab_channel=DanieleLe%C3%A3o)\
+[Usuários, Roles e Permissões de Acesso AWS IAM - Curso Prático Amazon Web Services - Aula 04 ](https://www.youtube.com/watch?v=spUlvo0HNFQ&ab_channel=GaragemdoInventor)
 </details>

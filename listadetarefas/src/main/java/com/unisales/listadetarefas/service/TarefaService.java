@@ -6,7 +6,6 @@ import java.nio.file.Path;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -34,16 +33,10 @@ public class TarefaService {
     @Autowired
     private SqsTemplate sqsTemplate;
 
-    @Value("${cloud.aws.region}")
-    private String region;
+    private String region = "sa-east-1";
     //private final S3Client s3Client = S3Client.builder().build();
     private final String bucketName = "sergio29";
 
-    //@Value("${amazon.aws.access-key}")
-    //private String awsacess;
-
-    //@Value("${amazon.aws.secret-key}")
-    //private String awssecretkey;
 
 
     /** 
