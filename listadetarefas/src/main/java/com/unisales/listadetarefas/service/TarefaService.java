@@ -19,8 +19,8 @@ import com.unisales.listadetarefas.model.TarefaDTO;
 import com.unisales.listadetarefas.persistence.TarefaRepository;
 
 import io.awspring.cloud.sqs.operations.SqsTemplate;
-import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
-import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
+//import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
+//import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.s3.S3Client;
 import software.amazon.awssdk.services.s3.model.PutObjectRequest;
@@ -157,11 +157,11 @@ public class TarefaService {
     public String uploadFile(@org.springframework.web.bind.annotation.RequestBody @RequestPart("file") MultipartFile file) throws IOException {
             S3Client s3Client = S3Client.builder()
                     .region(Region.of(region))
-                    .credentialsProvider(
+                    /*.credentialsProvider(
                             StaticCredentialsProvider.create(
                                     AwsBasicCredentials.create(awsacess, awssecretkey)
                             )
-                    )
+                    )*/
                     .build();
             
             String fileName = file.getOriginalFilename();
