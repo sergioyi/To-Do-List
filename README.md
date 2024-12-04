@@ -1,5 +1,7 @@
 # Lista de Tarefas
-link: http://15.229.87.241:8080/swagger-ui/swagger-ui/index.html#/
+link: http://15.228.18.195:8080/swagger-ui/swagger-ui/index.html#/
+\ou\
+http://15.228.18.195:8080/swagger-ui/index.html#/
 ## Objetivos:
 Desenvolver uma aplicação completa utilizando a stack tecnológica estudada ao longo do semestre, integrando conhecimentos de AWS SQS, AWS S3, Docker, Docker-Compose, Java, Spring-Boot, comunicação via API REST JSON, AWS EC2, Git, GitHub, GitHub Actions e AWS DynamoDB.
 
