@@ -2,6 +2,8 @@
 link: http://15.228.18.195:8080/swagger-ui/swagger-ui/index.html#/
 \ou\
 http://15.228.18.195:8080/swagger-ui/index.html#/
+\⚠️ o endpoint de upload foi feito para ser usado no postman ou algum hhtp client para uso da opção de arquivo: http://15.228.18.195:8080/swagger-ui/swagger-ui/index.html#/tarefa-controller/uploadFile
+
 ## Objetivos:
 Desenvolver uma aplicação completa utilizando a stack tecnológica estudada ao longo do semestre, integrando conhecimentos de AWS SQS, AWS S3, Docker, Docker-Compose, Java, Spring-Boot, comunicação via API REST JSON, AWS EC2, Git, GitHub, GitHub Actions e AWS DynamoDB.
 
